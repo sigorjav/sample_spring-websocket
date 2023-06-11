@@ -22,7 +22,6 @@ public class GreetingController {
      */
     @SendTo("/topic/greetings")
     public Greeting greet(HelloMessage message) throws InterruptedException {
-//        Thread.sleep(2000);
         return new Greeting("Hello " + HtmlUtils.htmlEscape(message.getName()));
     }
 }
